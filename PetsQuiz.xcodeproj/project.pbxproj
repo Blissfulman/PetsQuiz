@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CE8A88322555C0B6009C4BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A88312555C0B6009C4BF6 /* AppDelegate.swift */; };
-		CE8A88342555C0B6009C4BF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A88332555C0B6009C4BF6 /* SceneDelegate.swift */; };
 		CE8A88362555C0B6009C4BF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A88352555C0B6009C4BF6 /* ViewController.swift */; };
 		CE8A88392555C0B6009C4BF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A88372555C0B6009C4BF6 /* Main.storyboard */; };
 		CE8A883B2555C0B6009C4BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A883A2555C0B6009C4BF6 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		CE8A882E2555C0B6009C4BF6 /* PetsQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8A88312555C0B6009C4BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE8A88332555C0B6009C4BF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE8A88352555C0B6009C4BF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE8A88382555C0B6009C4BF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE8A883A2555C0B6009C4BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,15 +54,54 @@
 		CE8A88302555C0B6009C4BF6 /* PetsQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				CE8A88312555C0B6009C4BF6 /* AppDelegate.swift */,
-				CE8A88332555C0B6009C4BF6 /* SceneDelegate.swift */,
-				CE8A88352555C0B6009C4BF6 /* ViewController.swift */,
-				CE8A88372555C0B6009C4BF6 /* Main.storyboard */,
-				CE8A883A2555C0B6009C4BF6 /* Assets.xcassets */,
-				CE8A883C2555C0B6009C4BF6 /* LaunchScreen.storyboard */,
-				CE8A883F2555C0B6009C4BF6 /* Info.plist */,
+				CE8A88452555C0DC009C4BF6 /* View Controllers */,
+				CE8A88492555C178009C4BF6 /* Models */,
+				CE8A88472555C120009C4BF6 /* Storyboards */,
+				CE8A88482555C131009C4BF6 /* Additional Files */,
+				CE8A88462555C10E009C4BF6 /* Resources */,
 			);
 			path = PetsQuiz;
+			sourceTree = "<group>";
+		};
+		CE8A88452555C0DC009C4BF6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A88352555C0B6009C4BF6 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CE8A88462555C10E009C4BF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A883A2555C0B6009C4BF6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE8A88472555C120009C4BF6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A88372555C0B6009C4BF6 /* Main.storyboard */,
+				CE8A883C2555C0B6009C4BF6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CE8A88482555C131009C4BF6 /* Additional Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A88312555C0B6009C4BF6 /* AppDelegate.swift */,
+				CE8A883F2555C0B6009C4BF6 /* Info.plist */,
+			);
+			path = "Additional Files";
+			sourceTree = "<group>";
+		};
+		CE8A88492555C178009C4BF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +177,6 @@
 			files = (
 				CE8A88362555C0B6009C4BF6 /* ViewController.swift in Sources */,
 				CE8A88322555C0B6009C4BF6 /* AppDelegate.swift in Sources */,
-				CE8A88342555C0B6009C4BF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +321,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PetsQuiz/Info.plist;
+				INFOPLIST_FILE = "PetsQuiz/Additional Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.Swiftbook.PetsQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +339,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PetsQuiz/Info.plist;
+				INFOPLIST_FILE = "PetsQuiz/Additional Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.Swiftbook.PetsQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
