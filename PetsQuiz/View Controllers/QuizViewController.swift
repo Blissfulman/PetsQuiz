@@ -1,14 +1,14 @@
 //
-//  PetSelectionViewController.swift
+//  QuizViewController.swift
 //  PetsQuiz
 //
-//  Created by User on 06.11.2020.
+//  Created by User on 07.11.2020.
 //  Copyright © 2020 Swiftbook. All rights reserved.
 //
 
 import UIKit
 
-class PetSelectionViewController: UIViewController {
+class QuizViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,4 +16,3 @@ class PetSelectionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 }
-
