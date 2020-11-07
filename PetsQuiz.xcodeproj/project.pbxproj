@@ -12,7 +12,7 @@
 		CE8A88392555C0B6009C4BF6 /* PetSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A88372555C0B6009C4BF6 /* PetSelection.storyboard */; };
 		CE8A883B2555C0B6009C4BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A883A2555C0B6009C4BF6 /* Assets.xcassets */; };
 		CE8A883E2555C0B6009C4BF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A883C2555C0B6009C4BF6 /* LaunchScreen.storyboard */; };
-		CE8A884B2555C69A009C4BF6 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A884A2555C69A009C4BF6 /* Animal.swift */; };
+		CE8A884B2555C69A009C4BF6 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A884A2555C69A009C4BF6 /* Pet.swift */; };
 		CE8A884D2555C6BD009C4BF6 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A884C2555C6BD009C4BF6 /* Question.swift */; };
 		CE8A884F25568E1C009C4BF6 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A884E25568E1C009C4BF6 /* QuizViewController.swift */; };
 		CE8A885125568E38009C4BF6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A885025568E38009C4BF6 /* ResultViewController.swift */; };
@@ -28,7 +28,7 @@
 		CE8A883A2555C0B6009C4BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8A883D2555C0B6009C4BF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8A883F2555C0B6009C4BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE8A884A2555C69A009C4BF6 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		CE8A884A2555C69A009C4BF6 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		CE8A884C2555C6BD009C4BF6 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CE8A884E25568E1C009C4BF6 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		CE8A885025568E38009C4BF6 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		CE8A88492555C178009C4BF6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE8A884A2555C69A009C4BF6 /* Animal.swift */,
+				CE8A884A2555C69A009C4BF6 /* Pet.swift */,
 				CE8A884C2555C6BD009C4BF6 /* Question.swift */,
 			);
 			path = Models;
@@ -199,7 +199,7 @@
 				CE8A884F25568E1C009C4BF6 /* QuizViewController.swift in Sources */,
 				CE8A884D2555C6BD009C4BF6 /* Question.swift in Sources */,
 				CE8A88322555C0B6009C4BF6 /* AppDelegate.swift in Sources */,
-				CE8A884B2555C69A009C4BF6 /* Animal.swift in Sources */,
+				CE8A884B2555C69A009C4BF6 /* Pet.swift in Sources */,
 				CE8A885125568E38009C4BF6 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
