@@ -13,5 +13,5 @@ struct Question {
 
 struct Answer {
     let question: Question
-    let isSelected: Bool
+    var isSelected: Bool
 }
