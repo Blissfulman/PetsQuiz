@@ -9,10 +9,29 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var defenitionLabel: UILabel!
+    @IBOutlet weak var emojiLabel: UILabel!
+    
+    var testResult: [Answer]!
+    var chosenPet: PetType!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.setHidesBackButton(true, animated: true)
+        (defenitionLabel.text, emojiLabel.text) = getOwnerDefenition()
+    }
+    
+    private func getOwnerDefenition() -> (defenition: String, emoji: String) {
+        
+        var count = 0
+        testResult.forEach { (answer) in
+            count = answer.isSelected == answer.question.isGood ? 1 : -1
+        }
+        if count > 0 {
+            return (chosenPet.definition.goodOwner, "😉")
+        }
+        return (chosenPet.definition.badOwner, "☹️")
     }
 }
