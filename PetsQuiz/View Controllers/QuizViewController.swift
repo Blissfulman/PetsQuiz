@@ -7,24 +7,27 @@
 
 import UIKit
 
+// MARK: - Private Properties
 private var chosenAnimal: PetType!
 private var questionsList: [Question] = []
-private var countedResult: Int = 0
+private var userAnswers: [Answer] = []
 
 class questionsTableViewController: UITableViewController {
     
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         questionsList = Pet.getQuestions(for: chosenAnimal)
+        setupAnswers()
     }
     
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        let resultVC  = segue.destination as! ResultViewController
-    //        resultVC.testResult = countedResult
-    //    }
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultVC  = segue.destination as! ResultViewController
+        resultVC.testResult = userAnswers
+    }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         questionsList.count
     }
@@ -35,9 +38,7 @@ class questionsTableViewController: UITableViewController {
         let question = questionsList[indexPath.row]
         
         content.text = question.text
-        
         cell.contentConfiguration = content
-        
         cell.textLabel?.numberOfLines = 0
         
         let switchView = UISwitch(frame: .zero)
@@ -49,20 +50,19 @@ class questionsTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK: - Private Methods
+    private func setupAnswers() {
+        for question in questionsList {
+            userAnswers.append(Answer(question: question, isSelected: false))
+        }
+    }
+    
     @objc func switchDidChange(_ sender: UISwitch) {
         switch sender.isOn {
         case true:
-            if questionsList[sender.tag].isGood {
-                countedResult += 1
-            } else {
-                countedResult -= 1 }
+            userAnswers[sender.tag].isSelected = true
         case false:
-            if questionsList[sender.tag].isGood {
-                countedResult -= 1
-            } else {
-                countedResult += 1
-            }
-            
+            userAnswers[sender.tag].isSelected = false
         }
     }
 }
