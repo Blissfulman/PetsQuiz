@@ -6,24 +6,24 @@
 //  Copyright © 2020 Swiftbook. All rights reserved.
 //
 
-enum PetType: String {
+enum PetType: String, CaseIterable {
     case dogs = "Собаки"
     case cats = "Кошки"
     case fish = "Рыбки"
-    case bird = "Птицы"
+    case birds = "Птицы"
     
     var definition: (goodOwner: String, badOwner: String) {
         switch self {
         case .dogs:
             return ("Ваша собака может быть счастлива с таким хозяином.",
-                    "Не идивляйтесь если когда-нибудь ваша собака убежит и не вернётся. Вам стоило бы быть более внимательным к ней.")
+                    "Не удивляйтесь если когда-нибудь ваша собака убежит и не вернётся. Вам стоило бы быть более внимательным к ней.")
         case .cats:
             return ("Вы замурчательный хозяин.",
                     "Не оставляйте обувь на виду вашего питомца. Иначе вам же хуже будет.")
         case .fish:
             return ("Если б рыбы умели говорить, они бы сказали вам \"Спасибо!\".",
                     "Вам лучше не опускать руку в аквариум. Вы рискуете быть покусанными.")
-        case .bird:
+        case .birds:
             return ("Вашей причке повезло - вы внимательны и чутки к ней.",
                     "Если б вы понимали что чирикает ваша птичка когда обращается к вам, вам бы вряд ли это понравилось.")
         }
@@ -62,7 +62,7 @@ extension Pet {
                 Question(text: "Даю свежее мясо", isGood: false),
                 Question(text: "Использую подачу кислорода", isGood: true)
             ]
-        case .bird:
+        case .birds:
             return [
                 Question(text: "Выпускаю на волю из клетки", isGood: true),
                 Question(text: "Кормлю крупами", isGood: true),
