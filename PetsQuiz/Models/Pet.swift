@@ -6,7 +6,7 @@
 //  Copyright © 2020 Swiftbook. All rights reserved.
 //
 
-enum PetType: String {
+enum PetType: String, CaseIterable {
     case dogs = "Собаки"
     case cats = "Кошки"
     case fish = "Рыбки"
