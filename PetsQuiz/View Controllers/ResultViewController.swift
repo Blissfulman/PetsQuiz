@@ -10,7 +10,6 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    
     @IBOutlet weak var defenitionLabel: UILabel!
     @IBOutlet weak var emojiLabel: UILabel!
     
@@ -21,6 +20,10 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.setHidesBackButton(true, animated: true)
         (defenitionLabel.text, emojiLabel.text) = getOwnerDefenition()
+    }
+
+    @IBAction func goToMainScreenPressed() {
+        navigationController?.popToRootViewController(animated: true)
     }
     
     private func getOwnerDefenition() -> (defenition: String, emoji: String) {

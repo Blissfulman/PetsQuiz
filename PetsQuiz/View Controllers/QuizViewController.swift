@@ -18,7 +18,7 @@ class QuizViewController: UITableViewController {
     // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationItem.setHidesBackButton(true, animated: false)
+        navigationItem.setHidesBackButton(true, animated: false)
         questionsList = Pet.getQuestions(for: chosenAnimal)
         setupAnswers()
     }
@@ -26,7 +26,8 @@ class QuizViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultVC  = segue.destination as! ResultViewController
-//        resultVC.testResult = userAnswers
+        resultVC.testResult = userAnswers
+        resultVC.chosenPet = chosenAnimal
     }
     
     // MARK: - Table view data source
