@@ -30,7 +30,8 @@ class PetSelectionViewController: UIViewController {
         let quizVC = segue.destination as! QuizViewController
         guard let selectedIndexPath = petsCollectionView.indexPathsForSelectedItems else { return }
         guard let selectedItem = selectedIndexPath.first?.item else { return }
-//        quizVC.chosenAnimal = selectedPetType
+        let selectedPetType = petTypes[selectedItem]
+        quizVC.chosenAnimal = selectedPetType
     }
 }
 

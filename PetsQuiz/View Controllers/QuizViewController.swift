@@ -7,16 +7,18 @@
 
 import UIKit
 
-// MARK: - Private Properties
-private var chosenAnimal: PetType!
-private var questionsList: [Question] = []
-private var userAnswers: [Answer] = []
 
-class questionsTableViewController: UITableViewController {
+class QuizViewController: UITableViewController {
+    
+    // MARK: - Private Properties
+    var chosenAnimal: PetType!
+    private var questionsList: [Question] = []
+    private var userAnswers: [Answer] = []
     
     // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+//        navigationItem.setHidesBackButton(true, animated: false)
         questionsList = Pet.getQuestions(for: chosenAnimal)
         setupAnswers()
     }
@@ -24,7 +26,7 @@ class questionsTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultVC  = segue.destination as! ResultViewController
-        resultVC.testResult = userAnswers
+//        resultVC.testResult = userAnswers
     }
     
     // MARK: - Table view data source
